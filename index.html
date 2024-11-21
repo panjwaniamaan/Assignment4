@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Games Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #63bb55;
+            text-align: center;
+            padding: 20px;
+            background: url('assets/img/maingamebackground.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header {
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-top: 300px;
+        }
+        .games-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .game-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #c20e0e;
+            background-color: #007BFF;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .game-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Games Hub</h1>
+        <p>Choose your favorite game to play!</p>
+    </header>
+
+    <div class="games-container">
+        <a href="guessing_game.html" class="game-link">Guessing Game</a>
+        <a href="memory_game.html" class="game-link">Memory Game</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('assets/img/guessing_game_bkground.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 3rem;
+    margin-top: 90px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Game Controls Section */
+#game-controls {
+    margin-top: 30px;
+}
+
+#game-controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#game-controls button:hover {
+    background-color: #0056b3;
+}
+
+/* Game Board Styles */
+#game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+#game-board[data-level="4"] {
+    grid-template-columns: repeat(4, 1fr);
+}
+#game-board[data-level="5"] {
+    grid-template-columns: repeat(5, 1fr);
+}
+#game-board[data-level="6"] {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.tile .front, .tile .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.tile .front {
+    background-color: #333;
+    transform: rotateY(180deg);
+}
+
+.tile .back {
+    background-color: #111;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.tile .front {
+    background-image: url('images/blank.png'); /* Add the blank image */
+    background-color: #333;
+    transform: rotateY(180deg);
+    background-size: cover; /* Ensure proper scaling */
+    background-position: center;
+}
+
+
+.tile.flipped .back {
+    transform: rotateY(180deg);
+}
+
+/* Matched Tiles */
+.tile.matched .front {
+    background-color: #28a745;
+}
+
+/* Footer Styles */
+footer {
+    margin: 20px 0;
+}
+
+#clear-board {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(44, 85, 146);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: -100px;
+}
+
+#clear-board:hover {
+    background-color: darkred;
+}
+.tile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.tile.flipped {
+    transform: rotateY(180deg);
+}
+
+.tile .front, .tile .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.tile .front {
+    transform: rotateY(0deg);
+    background-color: #333;
+}
+
+.tile .back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+
+.tile.matched .front {
+    background-color: #28a745;
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#game-board[data-level="beginner"] {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#game-board[data-level="intermediate"] {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#game-board[data-level="advanced"] {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.tile .front, .tile .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.tile .front {
+    transform: rotateY(0deg);
+    background-color: #333;
+}
+
+.tile .back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+}
+
+.tile.matched .front {
+    background-color: #28a745;
+}
